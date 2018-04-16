@@ -42,7 +42,8 @@ if $platform == 'android' or $platform == 'iOS'
   end
 else # else create driver instance for desktop browser
   begin
-    $driver = Selenium::WebDriver.for(:"#{$browser_type}")
+    options = Selenium::WebDriver::Chrome::Options.new(args:['--headless'])
+    $driver = Selenium::WebDriver.for(:"#{$browser_type}", options: options)
     $driver.manage().window().maximize()
   rescue Exception => e
     puts e.message
