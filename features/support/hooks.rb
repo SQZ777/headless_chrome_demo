@@ -23,19 +23,19 @@ end
 
 #Tagged hooks
 
-Before('@Ex_tag1, @Ex_tag2') do
-  # This will only run before scenarios tagged
-  # with @Ex_tag1 OR @Ex_tag2.
-end
+# Before('@Ex_tag1, @Ex_tag2') do
+#   # This will only run before scenarios tagged
+#   # with @Ex_tag1 OR @Ex_tag2.
+# end
 
-AfterStep('@Ex_tag1, @Ex_tag2') do |scenario|
-  # This will only run after steps within scenarios tagged
-  # with @Ex_tag1 AND @Ex_tag2.
-end
+# AfterStep('@Ex_tag1, @Ex_tag2') do |scenario|
+#   # This will only run after steps within scenarios tagged
+#   # with @Ex_tag1 AND @Ex_tag2.
+# end
 
-Around('@Ex_tag1') do |scenario, block|
-  # Will round around a scenario
-end
+# Around('@Ex_tag1') do |scenario, block|
+#   # Will round around a scenario
+# end
 
 AfterConfiguration do |config|
   # Will run after cucumber has been configured
